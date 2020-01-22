@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: nacos-gyy
+  cloud:
+    nacos:
+      config:
+        server-addr: nacos.zcznb.top
+        file-extension: yaml
+  profiles:
+    active: dev
+server:
+  port: 8014

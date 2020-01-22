@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: order
+  cloud:
+    nacos:
+      config:
+        server-addr: nacos.zcznb.top
+        file-extension: yaml
+  profiles:
+    active: dev
+server:
+  port: 3100
+#fegin:
+#  httpclient:
+#    enabled: true

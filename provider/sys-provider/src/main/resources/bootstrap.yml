@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: sys
+  cloud:
+    nacos:
+      config:
+        server-addr: nacos.zcznb.top
+        file-extension: yaml
+  profiles:
+    active: dev
+server:
+  port: 3000
