@@ -1,13 +1,11 @@
 package com.xray.sys.provider;
 
 import com.xray.sys.model.SysUser;
-import feign.Param;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author gyy
@@ -18,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface SysUserService {
 
     @GetMapping("/getById")
-    SysUser getById(@Param("id") String id);
+    SysUser getById(@RequestParam("id") String id);
 
     @PostMapping("/test")
     SysUser test(@RequestBody SysUser sysUser);

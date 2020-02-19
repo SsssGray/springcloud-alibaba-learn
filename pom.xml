@@ -9,6 +9,7 @@
         <module>alibaba-nacos-discovery-client</module>
         <module>api</module>
         <module>provider</module>
+        <module>gateway</module>
 
     </modules>
 

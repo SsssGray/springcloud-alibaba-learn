@@ -29,10 +29,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-alibaba-nacos-config</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>io.github.openfeign</groupId>-->
-            <!--<artifactId>feign-httpclient</artifactId>-->
-            <!--<version>10.2.3</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+            <version>9.5.1</version>
+        </dependency>
     </dependencies>
 </project>

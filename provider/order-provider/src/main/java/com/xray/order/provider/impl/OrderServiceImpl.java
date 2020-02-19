@@ -32,6 +32,7 @@ public class OrderServiceImpl implements OrderService {
         Order order = new Order();
         order.setId(id);
         order.setTime(new Date());
+        sysUserService.getById("12");
         return order;
     }
 }
