@@ -24,15 +24,13 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order getById(String id) {
-        SysUser sysUser = new SysUser();
-        sysUser.setUserName("sss");
-        sysUser.setId("123");
-        sysUserService.test(sysUser);
-        System.out.println(sysUser.toString());
+
+        SysUser sysUser= sysUserService.getById("12");
+
         Order order = new Order();
         order.setId(id);
+        order.setPort(sysUser.getPort());
         order.setTime(new Date());
-        sysUserService.getById("12");
         return order;
     }
 }

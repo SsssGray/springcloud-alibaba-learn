@@ -15,4 +15,5 @@ public class SysUser implements Serializable {
 
     private String userName;
 
+    private String port;
 }

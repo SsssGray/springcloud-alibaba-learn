@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/1/21 11:11
  */
 @RestController
+@RequestMapping("sys")
 @Slf4j
 public class SysUserServiceImpl implements SysUserService {
 
@@ -26,7 +27,8 @@ public class SysUserServiceImpl implements SysUserService {
         SysUser sysUser = new SysUser();
         sysUser.setId(id);
         sysUser.setUserName("哈哈哈");
-        log.info(id);
+        sysUser.setPort(port);
+        log.info(port+":"+id);
         return sysUser;
     }
 

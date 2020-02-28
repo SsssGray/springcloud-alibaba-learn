@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version 1.0
  * @date 2020/1/21 10:53
  */
-@FeignClient(name = "sys")
+@FeignClient(name = "sys",path = "sys")
 public interface SysUserService {
 
     @GetMapping("/getById")

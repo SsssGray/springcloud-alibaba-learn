@@ -14,4 +14,6 @@ public class Order {
     private String id;
 
     private Date time;
+
+    private String port;
 }
