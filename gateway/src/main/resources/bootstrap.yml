@@ -6,8 +6,18 @@ spring:
       config:
         server-addr: nacos.zcznb.top
         file-extension: yaml
+    gateway:
+          routes:
+            - id: qq_route
+              uri: http://qq.com
+              order: 2
+              predicates:
+                - Method=get
+              filters:
+                - AddResponseHeader=hello, Gateway
   profiles:
     active: dev
 server:
   port: 4000
+
 
