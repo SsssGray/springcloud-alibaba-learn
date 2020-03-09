@@ -2,21 +2,18 @@ spring:
   application:
     name: gateway
   cloud:
-    nacos:
-      config:
-        server-addr: nacos.zcznb.top
-        file-extension: yaml
-    gateway:
-          routes:
-            - id: qq_route
-              uri: http://qq.com
-              order: 2
-              predicates:
-                - Method=get
-              filters:
-                - AddResponseHeader=hello, Gateway
-  profiles:
-    active: dev
+     nacos:
+        discovery:
+            server-addr: nacos.zcznb.top
+#        config:
+#          server-addr: nacos.zcznb.top
+#          file-extension: yaml
+     gateway:
+         discovery:
+             locator:
+                 enabled: true #表示网关自动从服务列表注册路由
+#  profiles:
+#    active: dev
 server:
   port: 4000
 
