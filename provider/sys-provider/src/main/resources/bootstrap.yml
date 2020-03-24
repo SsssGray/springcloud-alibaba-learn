@@ -1,3 +1,22 @@
+server:
+  port: 3000
+management:
+  endpoints:
+    web:
+      exposure:
+        # 这里用* 代表暴露所有端点只是为了观察效果，实际中按照需进行端点暴露
+        include: "*"
+  endpoint:
+      health:
+        # 详细信息显示给所有用户。
+        show-details: always
+  health:
+    status:
+      http-mapping:
+          # 自定义健康检查返回状态码对应的http状态码
+        FATAL:  503
+  server:
+    port: 54001  #端口不一样可能会导致无法访问
 spring:
   application:
     name: sys
@@ -6,7 +25,12 @@ spring:
       config:
         server-addr: nacos.zcznb.top
         file-extension: yaml
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:8080
   profiles:
     active: dev
-server:
-  port: 3000
+
+
+

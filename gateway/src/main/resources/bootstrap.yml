@@ -1,3 +1,9 @@
+server:
+  port: 4000
+management:
+  health:
+    mail:
+      enabled: false
 spring:
   application:
     name: gateway
@@ -5,16 +11,19 @@ spring:
      nacos:
         discovery:
             server-addr: nacos.zcznb.top
-#        config:
-#          server-addr: nacos.zcznb.top
-#          file-extension: yaml
+        config:
+          server-addr: nacos.zcznb.top
+          file-extension: yaml
      gateway:
          discovery:
              locator:
                  enabled: true #表示网关自动从服务列表注册路由
+     sentinel:
+       eager: true
+       transport:
+         dashboard: 127.0.0.1:8080
 #  profiles:
 #    active: dev
-server:
-  port: 4000
+
 
 
